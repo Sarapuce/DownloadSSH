@@ -13,8 +13,8 @@ def download(ip, username, password, files, remote_path, client_path):
     
     scp = SCPClient(ssh.get_transport())
     
-    for file_name in tqdm(df['file_path']):
-    scp.get(remote_path = '{}/{}'.format(remote_path, file_name), 
-            local_path = '{}/{}'.format(client_path, file_name))
+    for file_name in tqdm(files):
+        scp.get(remote_path = '{}/{}'.format(remote_path, file_name), 
+                local_path = '{}/{}'.format(client_path, file_name))
     
     scp.close()
