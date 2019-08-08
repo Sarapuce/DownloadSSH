@@ -18,3 +18,14 @@ def download(ip, username, password, files, remote_path, client_path):
                 local_path = '{}/{}'.format(client_path, file_name))
     
     scp.close()
+    
+if __name__ == '__main__':
+    from getpass import getpasss
+    ip          = input('Ip adress : ')
+    username    = input('Username : ')
+    password    = getpass(prompt = 'Password : ')
+    file        = input('File to download : ')
+    remote_path = input('Path on remote : ')
+    client_path = input('Path on your local machine : ')
+    
+    download(ip, username, password, files, remote_path, client_path)
