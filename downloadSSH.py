@@ -20,7 +20,7 @@ def download(ip, username, password, files, remote_path, client_path):
     scp.close()
     
 if __name__ == '__main__':
-    from getpass import getpasss
+    from getpass import getpass
     ip          = input('Ip adress : ')
     username    = input('Username : ')
     password    = getpass(prompt = 'Password : ')
@@ -28,4 +28,4 @@ if __name__ == '__main__':
     remote_path = input('Path on remote : ')
     client_path = input('Path on your local machine : ')
     
-    download(ip, username, password, files, remote_path, client_path)
+    download(ip, username, password, file, remote_path, client_path)
